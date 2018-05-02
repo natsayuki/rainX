@@ -1,3 +1,4 @@
+window.$ = window.jQuery = require('jquery');
 
 function hexToRgb(hex) {
     // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
@@ -118,10 +119,6 @@ function draw(){
   }
 }
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
-
 function mouseClicked(){
   drops.push(new drop(mouseX, mouseY, Math.floor(random(tracker.minLifespan, tracker.maxLifespan)), Math.floor(random(1, tracker.weight + 1))));
 }
@@ -156,7 +153,6 @@ $(document).ready(function(){
   modeSelector.val('default');
   renderModeSelector.val(tracker.renderMode);
   fillSelector.val('none');
-
   gear.click(function(){
     if(settingsDiv.css('display') == 'none'){
       settingsDiv.css({'display': 'block'});
