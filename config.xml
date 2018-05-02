@@ -11,12 +11,5 @@
     <access origin="*" />
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
-    <preference name="StatusBarBackgroundColor" value="transparent" />
-    <preference name="StatusBarBackgroundColor" value="#000000" />
-    <edit-config file="*-Info.plist" target="UIStatusBarHidden" mode="merge">
-        <true/>
-    </edit-config>
-    <edit-config file="*-Info.plist" target="UIViewControllerBasedStatusBarAppearance" mode="merge">
-        <false/>
-    </edit-config>
+    <gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
 </widget>
