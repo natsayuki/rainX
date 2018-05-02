@@ -1,0 +1,47 @@
+#defaultCanvas0{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+#gear{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  height: 2rem;
+  width: 2rem;
+  margin: 1rem;
+  background-image: url('images/gear.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#settingsDiv{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  display: none;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  background-color: black;
+}
+#settingsDiv > *{
+  color: white;
+}
+#frequencySlider. #minLifespanSlider, #maxLifespanSlider{
+  direction: ltr;
+}
+#sound{
+  height: auto;
+  width: 6rem;
+}
+.sounding{
+  content: url('images/soundOn.png') !important;
+}
+.subWrapper{
+  display: inline-block;
+}
+.colorSelector{
+  display: none;
+}
