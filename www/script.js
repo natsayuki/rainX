@@ -124,7 +124,7 @@ function mouseClicked(){
 
 function touchStarted(){
   drops.push(new drop(mouseX, mouseY, Math.floor(random(tracker.minLifespan, tracker.maxLifespan)), Math.floor(random(1, tracker.weight + 1))));
-  return false;
+  // return false;
 }
 
 function windowResized(){
