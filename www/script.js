@@ -122,6 +122,10 @@ function mouseClicked(){
   drops.push(new drop(mouseX, mouseY, Math.floor(random(tracker.minLifespan, tracker.maxLifespan)), Math.floor(random(1, tracker.weight + 1))));
 }
 
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 $(document).ready(function(){
   $('body').css({"background-color": `rgb(${tracker.bg[0]}, ${tracker.bg[1]}, tracker.bg[2])`});
   const gear = $('#gear');
