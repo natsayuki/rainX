@@ -123,6 +123,7 @@ function mouseClicked(){
 }
 
 $(document).ready(function(){
+  $('body').css({"background-color": `rgb(${tracker.bg[0]}, ${tracker.bg[1]}, tracker.bg[2])`});
   const gear = $('#gear');
   const settingsDiv = $('#settingsDiv');
   const frequencySlider = $('#frequencySlider');
@@ -207,6 +208,7 @@ $(document).ready(function(){
     }else if(tracker.theme == 'custom'){
       colorPickers.css({'display': 'inline-block'});
     }
+    $('body').css({"background-color": `rgb(${tracker.bg[0]}, ${tracker.bg[1]}, tracker.bg[2])`});
   });
   modeSelector.change(function(){
     tracker.mode = $(this).val();
@@ -217,8 +219,8 @@ $(document).ready(function(){
   });
   renderModeSelector.change(function(){
     tracker.renderMode = $(this).val();
-    if(tracker.renderMode == 'default') window.location.href = window.location.href.replace('?mode=webgl', '');
-    else if(tracker.renderMode == 'webgl') window.location.href += '?mode=webgl';
+    if(tracker.renderMode == 'default') window.location.reload();
+    else if(tracker.renderMode == 'webgl') createCanvas(windowWidth, windowHeight, WEBGL);
   });
   fillSelector.change(function(){
     tracker.fill = $(this).val();
