@@ -153,6 +153,8 @@ $(document).ready(function(){
   const bgSelector = $('#bgSelector');
   const strokeSelector = $('#strokeSelector');
   const colorPickers = $('.colorSelector');
+  const bgWrapper = $('#bgWrapper');
+  const strokeWrapper = $('#strokeWrapper');
   frequencySlider.val(tracker.frequency);
   minLifespanSlider.val(tracker.minLifespan);
   maxLifespanSlider.val(tracker.maxLifespan);
@@ -162,6 +164,15 @@ $(document).ready(function(){
   modeSelector.val('default');
   renderModeSelector.val(tracker.renderMode);
   fillSelector.val('none');
+  bgWrapper.ColorPicker({flat: true, onChange: function(hsb, hex, rgb, el){
+    console.log($(el).val());
+    rgb = hexToRgb(hex);
+    tracker.bg = [rgb['r'], rgb['g'], rgb['b']];
+  }});
+  strokeWrapper.ColorPicker({flat: true, onSubmit: function(hsb, hex, rgb, el){
+    rgb = hexToRgb(hex);
+    tracker.stroke = [rgb['r'], rgb['g'], rgb['b']];
+  }});
   gear.click(function(){
     if(settingsDiv.css('display') == 'none'){
       settingsDiv.css({'display': 'block'});
@@ -234,12 +245,12 @@ $(document).ready(function(){
   fillSelector.change(function(){
     tracker.fill = $(this).val();
   });
-  bgSelector.change(function(){
-    rgb = hexToRgb($(this).val());
+  function bgHandle(hsb, hex, rgb, el){
+    rgb = hexToRgb($(el).val());
     tracker.bg = [rgb['r'], rgb['g'], rgb['b']];
-  });
-  strokeSelector.change(function(){
-    rgb = hexToRgb($(this).val());
+  };
+  function strokeHandle(hsb, hex, rgb, el){
+    rgb = hexToRgb($(el).val());
     tracker.stroke = [rgb['r'], rgb['g'], rgb['b']];
-  });
+  };
 });
