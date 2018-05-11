@@ -1,14 +1,28 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.turtle.rain" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>rain.42turtle</name>
+<widget id="com.turtle.rain" version="1.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>rainX</name>
     <description>
-        A blank PhoneGap app.
+        rainX
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <icon height="180" platform="ios" src="icons/icon.png" width="180" />
+    <icon height="60" platform="ios" src="icons/icon_60x60.png" width="60" />
+    <icon height="120" platform="ios" src="icons/icon_120x120.png" width="120" />
+    <icon height="76" platform="ios" src="icons/icon_76x76.png" width="76" />
+    <icon height="152" platform="ios" src="icons/icon_152x152.png" width="152" />
+    <icon height="167" platform="ios" src="icons/icon.png" width="167" />
+    <icon height="29" platform="ios" src="icons/icon.png" width="29" />
+    <icon height="58" platform="ios" src="icons/icon.png" width="58" />
+    <icon height="87" platform="ios" src="icons/icon.png" width="87" />
+    <icon height="40" platform="ios" src="icons/icon_40x40.png" width="40" />
+    <icon height="80" platform="ios" src="icons/icon.png" width="80" />
+    <icon height="120" platform="ios" src="icons/icon.png" width="120" />
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
+    <preference name="StatusBarBackgroundColor" value="transparent" />
+    <preference name="StatusBarOverlaysWebView" value="true" />
 </widget>

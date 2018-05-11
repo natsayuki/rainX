@@ -122,10 +122,11 @@ function mouseClicked(){
   drops.push(new drop(mouseX, mouseY, Math.floor(random(tracker.minLifespan, tracker.maxLifespan)), Math.floor(random(1, tracker.weight + 1))));
 }
 
-function touchStarted(){
-  drops.push(new drop(mouseX, mouseY, Math.floor(random(tracker.minLifespan, tracker.maxLifespan)), Math.floor(random(1, tracker.weight + 1))));
-  // return false;
-}
+
+// uncomment for ios
+// function touchStarted(){
+//   drops.push(new drop(mouseX, mouseY, Math.floor(random(tracker.minLifespan, tracker.maxLifespan)), Math.floor(random(1, tracker.weight + 1))));
+// }
 
 function windowResized(){
   resizeCanvas(windowWidth, windowHeight);

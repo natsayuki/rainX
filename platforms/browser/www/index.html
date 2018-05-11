@@ -2,14 +2,16 @@
 <html>
   <head>
     <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
-    <script>window.$ = window.jQuery = require('jquery');</script>
+    <!-- <script>window.$ = window.jQuery = require('jquery');</script> -->
     <meta charset="utf-8" />
     <script src="p5.min.js"></script>
     <script src="p5.sound.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" onload="if (typeof require !=== 'undefined') window.$ = window.jQuery = module.exports;"></script>
+    <script src="colorpicker/js/colorpicker.js"></script>
     <script src="script.js"></script>
     <script>if (window.module) module = window.module;</script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="colorpicker/css/colorpicker.css" />
   </head>
   <body>
     <div id="gear"></div>
@@ -32,18 +34,18 @@
             <select id="themeSelector">
               <option value="pond">pond</option>
               <option value="lava">lava</option>
-              <option value="bee">testyTest</option>
+              <option value="bee">bee</option>
               <option value="black and white">black and white</option>
-              <option value="custom">custom</option>
+              <!-- <option value="custom">custom</option> -->
             </select>
           </div>
           <div id="bgWrapper" class="subWrapper colorSelector">
             <h3>background</h3>
-            <input type="color" id="bgSelector" />
+            <input type="color" id="bgSelector" class="colorpicker" />
           </div>
           <div id="strokeWrapper" class="subWrapper colorSelector">
             <h3>stroke</h3>
-            <input type="color" id="strokeSelector" />
+            <input type="color" id="strokeSelector" class="colorpicker" />
           </div>
           <div id="modeWrapper" class="subWrapper">
             <h3>mode</h3>
